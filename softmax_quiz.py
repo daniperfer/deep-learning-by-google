@@ -1,6 +1,7 @@
 """Softmax."""
 
 import numpy as np
+import matplotlib.pyplot as plt
 
 scores1 = [3.0, 1.0, 0.2]
 scores2 = [1.0, 2.0, 3.0]
@@ -17,10 +18,16 @@ print(softmax(scores2))
 print(softmax(scores3))
 
 # Plot softmax curves
-import matplotlib.pyplot as plt
 x = np.arange(-2.0, 6.0, 0.1)
-scores = np.vstack([x, np.ones_like(x), 0.2 * np.ones_like(x)])
+scores = np.vstack([x, np.ones_like(x), 0.2*np.ones_like(x)])
 
 plt.plot(x, softmax(scores).T, linewidth=2)
 plt.legend(['x', 'ones_like(x)', '0.2*ones_like(x)'], loc=0)
+plt.show()
+
+scores2 = np.vstack([np.ones_like(x)/10, x/10])
+
+plt.figure
+plt.plot(x/10, softmax(scores2).T, linewidth=2)
+plt.legend(['ones_like(x)/10', 'x/10'], loc=0)
 plt.show()
