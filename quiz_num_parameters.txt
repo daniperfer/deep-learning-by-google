@@ -1,0 +1,7 @@
+Total number of parameters
+
+= size of W + size of b
+
+= 28x28x10 + 10
+
+= 7850
