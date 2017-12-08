@@ -1,0 +1,3 @@
+In a tf.Session
+.eval is applied to Tensor evaluation (you can view it as a forward pass: known inputs, known weights --> produce an output prediction)
+.run is applied to Operations (you can think of it as a backward pass: known inputs, known outputs --> produce a weights update)
