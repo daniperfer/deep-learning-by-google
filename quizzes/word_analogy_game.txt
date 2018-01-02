@@ -1,0 +1,2 @@
+puppy - dog + cat = kitten
+taller - tall + short = shorter
